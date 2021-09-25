@@ -27,7 +27,6 @@ export default class App extends Component {
           height={3}
           color='#2196f3'
           progress={this.state.progress}
-          // onLoaderFinished={() => setProgress(0)}
         />
         <Switch>
           <Route exact path="/" >
