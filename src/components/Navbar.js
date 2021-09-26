@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default class Navbar extends Component {
-    render() {
+const Navbar = ()=> {
         return (
             <>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="/">GlobalNews</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,9 +22,9 @@ export default class Navbar extends Component {
                                     <Link to="/entertainment" className="nav-link">Entertainment</Link>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Sports
-                                    </Link>
+                                    </div>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><Link className="dropdown-item" to="/cricket">Cricket</Link></li>
                                         <li><Link className="dropdown-item" to="/football">Football</Link></li>
@@ -49,8 +48,7 @@ export default class Navbar extends Component {
                         </div>
                     </div>
                 </nav>
-
             </>
         )
-    }
 }
+export default Navbar
